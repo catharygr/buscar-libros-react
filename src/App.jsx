@@ -11,14 +11,16 @@ export default function App() {
   return (
     <>
       <header>
-        <form>
+        <form className="form-buscar">
           <TextoInput
             label="Buscar"
             placeholder="Busca una película"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />
-          <button type="submit">Buscar</button>
+          <button className="btn" type="submit">
+            Ir
+          </button>
         </form>
       </header>
     </>

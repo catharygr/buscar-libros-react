@@ -4,11 +4,11 @@ export default function TextoInput() {
   // let generarId = useId();
   // let apliacadoId = id || generarId;
   return (
-    <div className="container-input">
+    <>
       <label className="label-buscar" htmlFor="buscar">
         Buscar
       </label>
-      <input type="text" id="buscar" />
-    </div>
+      <input className="input-buscar" type="text" id="buscar" />
+    </>
   );
 }
