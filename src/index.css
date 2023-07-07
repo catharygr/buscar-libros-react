@@ -14,3 +14,13 @@ header {
   padding: 1rem;
   border-bottom: 3px solid #000;
 }
+.container-input {
+  display: flex;
+  justify-content: right;
+  margin: 1rem;
+}
+
+.label-buscar {
+  margin-right: 0.6rem;
+  color: #000;
+}
