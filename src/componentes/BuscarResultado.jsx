@@ -1,4 +1,5 @@
-export default function BuscarResultado(result) {
+/* eslint-disable react/prop-types */
+export default function BuscarResultado({ result }) {
   return (
     <div className="container">
       <article className="buscar-resultado">

@@ -41,3 +41,15 @@ header {
   margin-right: 0.6rem;
   color: #000;
 }
+
+.seccion-buscar {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.seccion-resultado {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
