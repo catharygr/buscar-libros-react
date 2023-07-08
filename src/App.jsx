@@ -9,7 +9,7 @@ export default function App() {
   const [searchInput, setSearchInput] = useState("");
   const [buscarResultados, setBuscarResultados] = useState([]);
 
-  // inactivo, cargando, exito, error
+  // inactivo, cargando, exito, sin exito, error
   const [estado, setEstado] = useState("inactivo");
 
   async function handleSubmit(e) {
