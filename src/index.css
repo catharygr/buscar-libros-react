@@ -12,7 +12,7 @@ header {
   background-color: pink;
   color: #fff;
   padding: 1rem;
-  border-bottom: 3px solid #000;
+  border-bottom: 2px solid #000;
 }
 
 .form-buscar {
@@ -22,16 +22,13 @@ header {
 }
 
 .input-buscar {
-  border: 2px solid #000;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   width: 200px;
 }
 
 .btn {
-  border: none;
   background-color: #fff;
-  border: 2px solid #000;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   width: 55px;
@@ -39,6 +36,8 @@ header {
 }
 
 .label-buscar {
+  display: flex;
+  align-items: center;
   margin-right: 0.6rem;
   color: #000;
 }

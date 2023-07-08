@@ -7,11 +7,28 @@ const ENDPOINT =
 
 export default function App() {
   const [searchInput, setSearchInput] = useState("");
+  const [buscarResultados, setBuscarResultados] = useState([]);
+
+  // inactivo, cargando, exito, error
+  const [estado, setEstado] = useState("inactivo");
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setEstado("cargando");
+    const url = `${ENDPOINT} ? searchInput=${searchInput}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+  }
+
+  const mapeo = buscarResultados.map((result) => {
+    return <BuscarResultado key={result.index} result={result} />;
+  });
 
   return (
     <>
       <header>
-        <form className="form-buscar">
+        <form onSubmit={handleSubmit} className="form-buscar">
           <TextoInput
             label="Buscar"
             placeholder="Busca una película"
@@ -23,6 +40,9 @@ export default function App() {
           </button>
         </form>
       </header>
+      <main>
+        <section className="section-buscar">{mapeo}</section>
+      </main>
     </>
   );
 }
