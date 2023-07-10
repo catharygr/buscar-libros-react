@@ -1,9 +1,7 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import BuscarResultado from "./componentes/BuscarResultado";
-import TextoInput from "./componentes/TextoInput";
 
-export default function App({ type }) {
+export default function App() {
   const [buscarInput, setBuscarInput] = useState("");
   const [buscarResultados, setBuscarResultados] = useState([]);
   // inactivo, cargando, exito, sin exito, error
@@ -12,20 +10,17 @@ export default function App({ type }) {
   async function handleSubmit(e) {
     e.preventDefault();
     setEstado("cargando");
-    const ENDPOINT = `https://www.omdbapi.com/?i=tt3896198&apikey=b4ee78c6&type=${type}&s=${buscarInput}`;
-    const url = `${ENDPOINT}`;
+    const url = `https://www.omdbapi.com/?i=tt3896198&apikey=b4ee78c6&s=${buscarInput}`;
     const res = await fetch(url);
     const data = await res.json();
 
     if (data.Response === "True") {
-      setBuscarResultados([data]);
+      setBuscarResultados(data.Search);
       setBuscarInput("");
       setEstado("exito");
     } else {
       setEstado("sin exito");
     }
-
-    console.log(data);
   }
 
   const mapeo = buscarResultados.map((result) => (
@@ -36,12 +31,18 @@ export default function App({ type }) {
     <>
       <header>
         <form onSubmit={handleSubmit} className="form-buscar">
-          <TextoInput
-            label="Buscar"
+          <label className="label-buscar" htmlFor="buscar">
+            Buscar
+          </label>
+          <input
+            className="input-buscar"
+            type="text"
+            id="buscar"
             placeholder="Busca una película"
             value={buscarInput}
             onChange={(e) => setBuscarInput(e.target.value)}
           />
+
           <button className="btn" type="submit">
             Ir
           </button>

@@ -8,9 +8,6 @@ export default function BuscarResultado({ result }) {
         </div>
         <div className="buscar-resultado__info">
           <h1>{result.Title}</h1>
-          <h2>{result.Director}</h2>
-          <p>{result.Genre}</p>
-          <p>{result.Country}</p>
           <p>{result.Year}</p>
           <p>{result.Type}</p>
         </div>
