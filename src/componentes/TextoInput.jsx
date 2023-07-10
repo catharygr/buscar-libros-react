@@ -1,8 +1,12 @@
-export default function TextoInput(id, label, ...props) {
+/* eslint-disable react/prop-types */
+export default function TextoInput({ label, ...props }) {
+  const imdbID = `input-${label}`;
   return (
     <>
-      <label htmlFor={id}>{label}</label>
-      <input id={id} {...props} />
+      <label className="label-buscar" htmlFor={imdbID}>
+        {label}
+      </label>
+      <input id={imdbID} {...props} />
     </>
   );
 }

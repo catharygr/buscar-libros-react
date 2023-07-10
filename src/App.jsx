@@ -5,6 +5,7 @@ import TextoInput from "./componentes/TextoInput";
 export default function App() {
   const [buscarInput, setBuscarInput] = useState("");
   const [buscarResultados, setBuscarResultados] = useState([]);
+  console.log(buscarResultados);
   //  cargando, exito, sin exito, error
   const [estado, setEstado] = useState("");
 
@@ -33,10 +34,10 @@ export default function App() {
       <header>
         <form onSubmit={handleSubmit} className="form-buscar">
           <TextoInput
+            required={true}
             className="input-buscar"
             type="text"
             label="Buscar"
-            id="buscar"
             placeholder="Busca una película"
             value={buscarInput}
             onChange={(e) => setBuscarInput(e.target.value)}

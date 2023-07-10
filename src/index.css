@@ -10,7 +10,6 @@ body {
 
 header {
   background-color: pink;
-  color: #fff;
   padding: 1rem;
   border-bottom: 2px solid #000;
 }
@@ -24,7 +23,9 @@ header {
 .input-buscar {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  border-right: none;
   width: 200px;
+  padding-left: 0.6rem;
 }
 
 .btn {
@@ -36,10 +37,8 @@ header {
 }
 
 .label-buscar {
-  display: flex;
-  align-items: center;
   margin-right: 0.6rem;
-  color: #000;
+  align-self: center;
 }
 
 .seccion-buscar {
@@ -53,15 +52,3 @@ header {
   justify-content: center;
   margin: 0.5rem;
 }
-
-/* .container {
-  main-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    background-color: antiquewhite;
-    color: #222;
-    padding: 3rem;
-    padding-top: calc(3rem + 20px);
-    gap: 1rem;
-  }
-} */
