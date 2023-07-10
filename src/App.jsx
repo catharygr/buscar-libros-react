@@ -1,11 +1,12 @@
 import { useState } from "react";
 import BuscarResultado from "./componentes/BuscarResultado";
+import TextoInput from "./componentes/TextoInput";
 
 export default function App() {
   const [buscarInput, setBuscarInput] = useState("");
   const [buscarResultados, setBuscarResultados] = useState([]);
-  // inactivo, cargando, exito, sin exito, error
-  const [estado, setEstado] = useState("inactivo");
+  //  cargando, exito, sin exito, error
+  const [estado, setEstado] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -31,12 +32,10 @@ export default function App() {
     <>
       <header>
         <form onSubmit={handleSubmit} className="form-buscar">
-          <label className="label-buscar" htmlFor="buscar">
-            Buscar
-          </label>
-          <input
+          <TextoInput
             className="input-buscar"
             type="text"
+            label="Buscar"
             id="buscar"
             placeholder="Busca una película"
             value={buscarInput}
@@ -52,7 +51,6 @@ export default function App() {
         <section className="seccion-buscar">
           <div>
             <h2>Buscar resultados:</h2>
-            {estado === "inactivo" && <p>Busca una película</p>}
             {estado === "cargando" && <p>Cargando...</p>}
             {estado === "exito" && <p>Resultados encontrados</p>}
             {estado === "sin exito" && <p>Sin resultados</p>}

@@ -53,3 +53,15 @@ header {
   justify-content: center;
   margin: 0.5rem;
 }
+
+/* .container {
+  main-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    background-color: antiquewhite;
+    color: #222;
+    padding: 3rem;
+    padding-top: calc(3rem + 20px);
+    gap: 1rem;
+  }
+} */
