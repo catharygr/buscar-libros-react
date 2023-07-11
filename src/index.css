@@ -60,3 +60,10 @@ header {
   height: 100%;
   object-fit: cover;
 }
+
+@media (min-width: 42rem) {
+  .buscar-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr, 1fr);
+  }
+}
