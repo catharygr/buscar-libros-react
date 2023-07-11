@@ -52,10 +52,14 @@ export default function App() {
         <section className="seccion-buscar">
           <div>
             <h2>Buscar resultados:</h2>
-            {estado === "cargando" && <p>Cargando...</p>}
-            {estado === "exito" && <p>Resultados encontrados</p>}
-            {estado === "sin exito" && <p>Sin resultados</p>}
-            {estado === "error" && <p>Hubo un error</p>}
+            {estado === "cargando" && <p className="resultados">Cargando...</p>}
+            {estado === "exito" && (
+              <p className="resultados">Resultados encontrados:</p>
+            )}
+            {estado === "sin exito" && (
+              <p className="resultados">Sin resultados</p>
+            )}
+            {estado === "error" && <p className="resultados">Hubo un error</p>}
             {mapeo}
           </div>
         </section>
