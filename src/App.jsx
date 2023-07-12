@@ -49,19 +49,14 @@ export default function App() {
         </form>
       </header>
       <main>
-        <section className="seccion-buscar">
-          <h2>Buscar resultados:</h2>
-
-          {estado === "cargando" && <p className="resultados">Cargando...</p>}
-          {estado === "exito" && (
-            <p className="resultados">Resultados encontrados:</p>
-          )}
-          {estado === "sin exito" && (
-            <p className="resultados">Sin resultados</p>
-          )}
-          {estado === "error" && <p className="resultados">Hubo un error</p>}
-          {mapeo}
-        </section>
+        <h2>Buscar resultados:</h2>
+        {estado === "cargando" && <p className="resultados">Cargando...</p>}
+        {estado === "exito" && (
+          <p className="resultados">Resultados encontrados:</p>
+        )}
+        {estado === "sin exito" && <p className="resultados">Sin resultados</p>}
+        {estado === "error" && <p className="resultados">Hubo un error</p>}
+        <section className="seccion-buscar">{mapeo}</section>
       </main>
     </>
   );
