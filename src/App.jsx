@@ -50,18 +50,17 @@ export default function App() {
       </header>
       <main>
         <section className="seccion-buscar">
-          <div>
-            <h2>Buscar resultados:</h2>
-            {estado === "cargando" && <p className="resultados">Cargando...</p>}
-            {estado === "exito" && (
-              <p className="resultados">Resultados encontrados:</p>
-            )}
-            {estado === "sin exito" && (
-              <p className="resultados">Sin resultados</p>
-            )}
-            {estado === "error" && <p className="resultados">Hubo un error</p>}
-            {mapeo}
-          </div>
+          <h2>Buscar resultados:</h2>
+
+          {estado === "cargando" && <p className="resultados">Cargando...</p>}
+          {estado === "exito" && (
+            <p className="resultados">Resultados encontrados:</p>
+          )}
+          {estado === "sin exito" && (
+            <p className="resultados">Sin resultados</p>
+          )}
+          {estado === "error" && <p className="resultados">Hubo un error</p>}
+          {mapeo}
         </section>
       </main>
     </>
