@@ -49,13 +49,13 @@ h2,
 
 .seccion-buscar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  justify-items: stretch;
-  align-items: stretch;
+  justify-items: center;
 }
+
 .card-buscar {
   display: flex;
   flex-direction: column;
@@ -67,3 +67,15 @@ h2,
   padding: 1rem;
   transition: all 0.3s ease-in-out;
 }
+
+@media (min-width: 42rem) {
+ .seccion-buscar {
+    grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+
+}
+
