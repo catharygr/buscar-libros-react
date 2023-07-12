@@ -29,7 +29,7 @@ h2,
 .input-buscar {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  border-right: none;
+  border: 1px solid #000;
   width: 200px;
   padding-left: 0.6rem;
 }
@@ -40,6 +40,9 @@ h2,
   border-top-right-radius: 5px;
   width: 55px;
   height: 35px;
+  border: none;
+  border: 1px solid #000;
+  cursor: pointer;
 }
 
 .label-buscar {
@@ -69,13 +72,25 @@ h2,
 }
 
 @media (min-width: 42rem) {
- .seccion-buscar {
+  .seccion-buscar {
     grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  justify-items: stretch;
-  align-items: stretch;
-
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+  h2,
+  .resultados {
+    font-size: 1.5rem;
+  }
+  .input-buscar {
+    font-size: 1.1rem;
+  }
+  .btn {
+    font-size: 1.1rem;
+  }
+  .label-buscar {
+    font-size: 1.1rem;
+  }
 }
-
