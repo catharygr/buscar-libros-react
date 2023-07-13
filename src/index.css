@@ -63,12 +63,20 @@ h2,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  padding: 1rem 3rem;
   transition: all 0.3s ease-in-out;
+}
+
+.buscar-resultado__img {
+  align-self: center;
+}
+
+.buscar-resultado__info {
+  text-align: left;
 }
 
 @media (min-width: 42rem) {
